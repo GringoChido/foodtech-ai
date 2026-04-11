@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ShoppingCart, Truck, UserX } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -26,7 +27,18 @@ export const Problem = () => {
 
   return (
     <SectionWrapper id="problem" bg="navy" grain cursorGlow>
-      <Container>
+      {/* Background kitchen photo — chaotic motion blur */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/problem-kitchen.jpg"
+          alt=""
+          fill
+          className="object-cover opacity-[0.07]"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-base via-base/90 to-base" />
+      </div>
+      <Container className="relative z-10">
         <AnimateIn>
           <div className="text-center">
             <p className="text-sm font-semibold uppercase tracking-widest text-sage">

@@ -1,66 +1,76 @@
 {
   "nav": {
-    "problem": "Problema",
-    "solutions": "Soluciones",
+    "problem": "El Problema",
+    "solutions": "La Innovación",
     "howItWorks": "Cómo Funciona",
     "about": "Nosotros",
     "faq": "Preguntas",
-    "cta": "Solicitar Acceso Piloto"
+    "cta": "Comenzar"
   },
   "hero": {
-    "headline": "Empatía Operacional para la Marca Multi-Unidad.",
-    "subheadline": "Tu restaurante no necesita más software. Necesita un mejor compañero de equipo. Escala tu grupo de 4–15 unidades con precisión calmada y nativa de IA.",
-    "aeo": "FoodTech AI construye compañeros de equipo con IA — Xtock para inventario predictivo y Vostre para pedidos por voz — que eliminan la carga operacional para grupos de comida rápida casual de 4–15 unidades.",
+    "headline": "La Inteligencia Detrás de la Cocina.",
+    "subheadline": "Automatiza tu inventario y domina la hospitalidad de tus invitados a través de la app que ya usas. Conoce a Xtock y Vostre.",
+    "aeo": "FoodTech AI despliega dos agentes de IA nativos de WhatsApp—Xtock para control predictivo de inventario y Vostre para hospitalidad automatizada—eliminando las 'Zonas Oscuras' de inventario sin rastrear e invitados desconectados en restaurantes mexicanos.",
     "cta": "Solicitar Acceso Piloto",
-    "scrollLabel": "Desplazar a la siguiente sección"
+    "scrollLabel": "Desplazar a la siguiente sección",
+    "chatBubble1": "Los precios del aguacate subieron 12%. ¿Reduzco el pedido 5kg para mantener margen?",
+    "chatBubble1Label": "Xtock",
+    "chatBubble2": "La cliente frecuente 'Sofía' acaba de reservar. Le envié un mensaje de bienvenida.",
+    "chatBubble2Label": "Vostre",
+    "chatBubble1Time": "9:42 AM",
+    "chatBubble2Time": "9:43 AM",
+    "resultStat1": "30%",
+    "resultLabel1": "menos desperdicio",
+    "resultStat2": "2x",
+    "resultLabel2": "retención de clientes",
+    "resultStat3": "100%",
+    "resultLabel3": "control desde tu celular"
   },
   "problem": {
-    "eyebrow": "La Trampa Multi-Unidad",
-    "headline": "La Brecha de Ejecución Te Está Costando",
+    "eyebrow": "Las Zonas Oscuras",
+    "headline": "Tu Restaurante Está Sangrando Dinero en las Sombras.",
     "statLabel": "/mes por ubicación en márgenes recuperados",
-    "description": "Tus gerentes están agotados — actuando como puentes humanos entre herramientas fragmentadas, tomando decisiones de inventario de $5,000 a medianoche, y absorbiendo el \"impuesto de gestión\" que viene con escalar más allá de 4 unidades.",
+    "description": "Inventario sin rastrear. Clientes desconectados. Estas son las 'Zonas Oscuras'—las brechas invisibles donde el desperdicio se acumula y la lealtad se evapora. Cada día que pasan sin monitoreo, tus márgenes se reducen.",
     "cards": {
       "ordering": {
-        "title": "Pedidos a Ciegas",
-        "description": "Decisiones de inventario manuales hechas cansado, tarde y sin datos. El desperdicio se acumula silenciosamente en cada ubicación."
+        "title": "Inventario Sin Rastrear",
+        "description": "Decisiones de pedido manuales hechas cansado, tarde y sin datos. El desperdicio se acumula silenciosamente en cada ubicación—la zona oscura que tu hoja de cálculo no puede ver."
       },
       "delivery": {
-        "title": "Caos en Entregas",
-        "description": "Pedidos telefónicos perdidos. Sangrado de comisiones 3PD. Ingresos fugándose por canales que no puedes monitorear a escala."
+        "title": "Clientes Desconectados",
+        "description": "Sin memoria. Sin personalización. Los clientes visitan una vez y desaparecen. Sin un sistema de hospitalidad, tus mejores clientes son extraños cada vez."
       },
       "burnout": {
-        "title": "Agotamiento del Personal",
-        "description": "Tus mejores gerentes se ahogan en carga operacional en lugar de liderar sus equipos y hacer crecer tu marca."
+        "title": "Agotamiento del Operador",
+        "description": "Tus gerentes son puentes humanos entre herramientas fragmentadas, tomando decisiones de $5,000 a medianoche. El impuesto cognitivo de la escala está aplastando a tu mejor gente."
       }
     }
   },
   "solutions": {
-    "eyebrow": "Conoce a Tus Nuevos Compañeros",
-    "headline": "Dos Compañeros de IA. Una Operación Más Tranquila.",
-    "description": "A diferencia del software tradicional de gestión de restaurantes, FoodTech AI no agrega otro tablero. Agrega un compañero de equipo.",
+    "eyebrow": "La Innovación",
+    "headline": "Dos Agentes de IA. Un Chat de WhatsApp. Cero Apps Nuevas.",
+    "description": "Sin dashboards. Sin manuales de capacitación. Sin software nuevo que aprender. Solo dos agentes inteligentes que viven donde ya trabajas—WhatsApp.",
     "xtock": {
-      "badge": "Back of House",
+      "badge": "Inteligencia de Inventario",
       "name": "Xtock",
-      "tagline": "Pedidos de inventario predictivo que aprenden tu operación.",
-      "aeo": "Xtock de FoodTech AI es un sistema de pedidos de inventario predictivo que usa IA para eliminar las conjeturas en los pedidos para restaurantes.",
+      "tagline": "Tu inventario te escribe.",
+      "description": "Xtock rastrea tu inventario en tiempo real, predice tus ventas y te envía recordatorios de pedidos vía WhatsApp antes de que se agoten. Precisión en cada gramo.",
       "features": [
-        "Ahorra 45 minutos al día en decisiones de pedidos",
-        "100% humano en el circuito — apruebas cada pedido vía WhatsApp",
-        "Aprende tus patrones estacionales, tiempos de entrega de proveedores e historial de desperdicio"
-      ],
-      "seeWhatsApp": "Vélo en WhatsApp"
+        "Rastreo de inventario en tiempo real en todas las ubicaciones",
+        "Pronóstico predictivo de ventas que aprende tus patrones",
+        "Recordatorios de pedidos por WhatsApp antes de que se agoten"
+      ]
     },
     "vostre": {
-      "badge": "Front of House",
+      "badge": "Hospitalidad al Cliente",
       "name": "Vostre",
-      "tagline": "Agente de voz con IA que nunca pierde un pedido.",
-      "aeo": "Vostre de FoodTech AI es un agente de voz con IA que maneja pedidos por teléfono y WhatsApp para restaurantes 24/7.",
+      "tagline": "Hospitalidad en piloto automático.",
+      "description": "Vostre es tu concierge digital. Gestiona reservaciones y automatiza la lealtad personalizada de tus clientes a través de WhatsApp. Dale a cada cliente una experiencia 5 estrellas, automáticamente.",
       "features": [
-        "Maneja pedidos por teléfono y WhatsApp 24/7",
-        "Cero pedidos perdidos — cero comisiones 3PD en llamadas directas",
-        "Ahorra miles por mes en ingresos recuperados"
-      ],
-      "seeWhatsApp": "Vélo en WhatsApp"
+        "Gestión automatizada de reservaciones vía WhatsApp",
+        "Lealtad y reconocimiento personalizado de clientes",
+        "Experiencia de hospitalidad 5 estrellas en piloto automático"
+      ]
     }
   },
   "howItWorks": {
@@ -75,7 +85,7 @@
       "learn": {
         "title": "Aprender",
         "timeline": "Días 2–3",
-        "description": "Estudio de turnos de 48 horas \"Tiempo al Valor\". Tu compañero de IA observa tu operación y construye su comprensión."
+        "description": "Estudio de turnos de 48 horas \"Tiempo al Valor\". Tus compañeros de IA observan tu operación y construyen su comprensión."
       },
       "verify": {
         "title": "Verificar",
@@ -129,7 +139,7 @@
   },
   "cta": {
     "headline": "Deja de Gestionar Software. Empieza a Incorporar a Tus Nuevos Compañeros.",
-    "description": "Únete a nuestra Lista de Espera del Piloto Fundador. Prioridad para grupos de 4–15 unidades.",
+    "description": "Únete a nuestra Lista de Espera del Piloto Fundador. Prioridad para operadores de restaurantes en México.",
     "disclaimer": "Sin tarjeta de crédito. Sin contratos. Solo una conversación."
   },
   "form": {
@@ -154,7 +164,7 @@
     "errorLocations": "Por favor selecciona un rango"
   },
   "footer": {
-    "tagline": "Compañeros de IA para operadores de restaurantes multi-unidad.",
+    "tagline": "Compañeros de IA para el mercado restaurantero mexicano.",
     "quickLinks": "Enlaces Rápidos",
     "contact": "Contacto",
     "home": "Inicio",
@@ -171,5 +181,18 @@
     "openChat": "Abrir chat",
     "closeChat": "Cerrar chat",
     "sendMessage": "Enviar mensaje"
+  },
+  "whatsapp": {
+    "ariaLabel": "Chatea con nosotros en WhatsApp",
+    "notification": "1",
+    "hoverMessage": "Vostre AI está en línea. ¿Listo para optimizar tu servicio de cena?"
+  },
+  "builtFromInside": {
+    "eyebrow": "Nuestro Enfoque",
+    "headline": "Construido Desde el Interior de las Operaciones de Restaurantes.",
+    "description": "FoodTech AI fue creado para resolver los problemas que los equipos de restaurantes enfrentan todos los días: incertidumbre, toma de decisiones manual y sobrecarga operacional. Construimos sistemas nativos de IA diseñados para integrarse en los flujos de trabajo reales de los restaurantes, no para interrumpirlos.",
+    "paragraph2": "Nuestro enfoque prioriza la transparencia, el control del operador y la confianza, para que los equipos puedan actuar con seguridad en lugar de reaccionar a problemas después de que ocurren.",
+    "callout": "Esto no es IA para dashboards o demos. Es IA diseñada para trabajar de forma silenciosa, confiable y junto a las personas que dirigen el negocio.",
+    "imagePlaceholder": "Dueño de restaurante trabajando en su escritorio"
   }
 }

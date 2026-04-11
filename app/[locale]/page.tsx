@@ -2,13 +2,14 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { Problem } from "@/components/sections/Problem";
-import { Solutions } from "@/components/sections/Solutions";
+import { ProductFeatures } from "@/components/sections/ProductFeatures";
+import { BuiltFromInside } from "@/components/sections/BuiltFromInside";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { FounderStory } from "@/components/sections/FounderStory";
 import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { WhatsAppFloating } from "@/components/sections/WhatsAppFloating";
 import { allSchemas } from "@/lib/schema";
-import { ChatWidget } from "@/components/chatbot/ChatWidget";
 
 export default function HomePage() {
   return (
@@ -24,29 +25,23 @@ export default function HomePage() {
       <Header />
       <main id="main-content">
         <Hero />
-        {/* Hero → Problem: both navy, subtle rule */}
-        <div className="h-px bg-white/5" />
+        <ProductFeatures />
+        <div className="h-px bg-white/[0.04]" />
         <Problem />
-        {/* Problem (navy) → Products (cream) */}
-        <div className="h-24 md:h-32 bg-gradient-to-b from-navy to-cream" />
-        <Solutions />
-        {/* Products (cream) → How It Works (navy) */}
-        <div className="h-24 md:h-32 bg-gradient-to-b from-cream to-navy" />
+        <div className="h-px bg-white/[0.04]" />
+        <BuiltFromInside />
+        <div className="h-px bg-white/[0.04]" />
         <HowItWorks />
-        {/* How It Works (navy) → Founder (charcoal) */}
-        <div className="h-16 md:h-24 bg-gradient-to-b from-navy to-charcoal" />
+        <div className="h-px bg-white/[0.04]" />
         <FounderStory />
-        {/* Founder (charcoal) → FAQ (navy) */}
-        <div className="h-16 md:h-24 bg-gradient-to-b from-charcoal to-navy" />
+        <div className="h-px bg-white/[0.04]" />
         <FAQ />
-        {/* FAQ (navy) → CTA (sage) */}
-        <div className="h-24 md:h-32 bg-gradient-to-b from-navy to-sage" />
+        <div className="h-px bg-white/[0.04]" />
         <FinalCTA />
-        {/* CTA (sage) → Footer (navy) */}
-        <div className="h-24 md:h-32 bg-gradient-to-b from-sage to-navy" />
+        <div className="h-px bg-white/[0.04]" />
       </main>
       <Footer />
-      <ChatWidget />
+      <WhatsAppFloating />
     </>
   );
 }

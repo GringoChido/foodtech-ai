@@ -1,15 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { GrainOverlay } from "@/components/ui/GrainOverlay";
 import { Container } from "@/components/ui/Container";
 import { AnimateIn } from "@/components/ui/AnimateIn";
-
-const InitialsAvatar = () => (
-  <div className="flex h-32 w-32 items-center justify-center rounded-full border-2 border-sage/30 bg-charcoal shadow-[0_0_60px_rgba(163,177,138,0.15)] transition-all duration-300 hover:border-sage/50 hover:shadow-[0_0_80px_rgba(163,177,138,0.25)]">
-    <span className="font-heading text-4xl font-extrabold text-sage">FG</span>
-  </div>
-);
 
 export const FounderStory = () => {
   const t = useTranslations("founder");
@@ -20,9 +15,19 @@ export const FounderStory = () => {
 
       <Container className="relative z-[2]">
         <div className="grid items-center gap-12 lg:grid-cols-5">
-          {/* Mobile portrait */}
+          {/* Kitchen atmosphere photo — mobile */}
           <AnimateIn className="flex justify-center lg:hidden">
-            <InitialsAvatar />
+            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-white/[0.06]">
+              <Image
+                src="/images/founder-kitchen.jpg"
+                alt="Back-of-house restaurant kitchen"
+                fill
+                className="object-cover"
+                style={{ objectPosition: "15% center" }}
+                sizes="100vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent" />
+            </div>
           </AnimateIn>
 
           <div className="lg:col-span-3">
@@ -60,9 +65,19 @@ export const FounderStory = () => {
             </AnimateIn>
           </div>
 
-          {/* Desktop portrait */}
-          <AnimateIn direction="right" delay={0.2} className="hidden justify-center lg:col-span-2 lg:flex">
-            <InitialsAvatar />
+          {/* Kitchen atmosphere photo — desktop */}
+          <AnimateIn direction="right" delay={0.2} className="hidden lg:col-span-2 lg:block">
+            <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-white/[0.06]">
+              <Image
+                src="/images/founder-kitchen.jpg"
+                alt="Back-of-house restaurant kitchen"
+                fill
+                className="object-cover"
+                style={{ objectPosition: "15% center" }}
+                sizes="40vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/50 to-transparent" />
+            </div>
           </AnimateIn>
         </div>
       </Container>

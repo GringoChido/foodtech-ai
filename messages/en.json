@@ -1,66 +1,76 @@
 {
   "nav": {
-    "problem": "Problem",
-    "solutions": "Solutions",
+    "problem": "The Problem",
+    "solutions": "The Innovation",
     "howItWorks": "How It Works",
     "about": "About",
     "faq": "FAQ",
-    "cta": "Apply for Pilot Access"
+    "cta": "Get Started"
   },
   "hero": {
-    "headline": "Operational Empathy for the Multi-Unit Brand.",
-    "subheadline": "Your restaurant doesn't need more software. It needs a better teammate. Scale your 4–15 unit group with calm, AI-native precision.",
-    "aeo": "FoodTech AI builds AI teammates — Xtock for predictive inventory and Vostre for voice ordering — that remove operational drag for 4–15 unit fast-casual restaurant groups.",
+    "headline": "The Intelligence Behind the Kitchen.",
+    "subheadline": "Automate your inventory and master guest hospitality through the app you already use. Meet Xtock & Vostre.",
+    "aeo": "FoodTech AI deploys two WhatsApp-native AI agents—Xtock for predictive inventory control and Vostre for automated guest hospitality—eliminating the 'Dark Zones' of untracked inventory and disconnected guests in Mexican restaurants.",
     "cta": "Apply for Pilot Access",
-    "scrollLabel": "Scroll to next section"
+    "scrollLabel": "Scroll to next section",
+    "chatBubble1": "Avocado prices are up 12%. Reducing order by 5kg to maintain margin?",
+    "chatBubble1Label": "Xtock",
+    "chatBubble2": "Regular guest 'Sofia' just booked. I've sent her a welcome message.",
+    "chatBubble2Label": "Vostre",
+    "chatBubble1Time": "9:42 AM",
+    "chatBubble2Time": "9:43 AM",
+    "resultStat1": "30%",
+    "resultLabel1": "less waste",
+    "resultStat2": "2x",
+    "resultLabel2": "guest retention",
+    "resultStat3": "100%",
+    "resultLabel3": "control from your phone"
   },
   "problem": {
-    "eyebrow": "The Multi-Unit Trap",
-    "headline": "The Execution Gap Is Costing You",
+    "eyebrow": "The Dark Zones",
+    "headline": "Your Restaurant Is Bleeding Money in the Shadows.",
     "statLabel": "/month per location in recovered margins",
-    "description": "Your GMs are exhausted — acting as human bridges between fragmented tools, making $5,000 inventory decisions at midnight, and absorbing the \"management tax\" that comes with scaling past 4 units.",
+    "description": "Untracked inventory. Disconnected guests. These are the 'Dark Zones'—the invisible gaps where waste compounds and loyalty evaporates. Every day they go unmonitored, your margins shrink.",
     "cards": {
       "ordering": {
-        "title": "Ordering Guesswork",
-        "description": "Manual inventory decisions made tired, late, and without data. Waste adds up silently across every location."
+        "title": "Untracked Inventory",
+        "description": "Manual ordering decisions made tired, late, and without data. Waste compounds silently across every location—the dark zone your spreadsheet can't see."
       },
       "delivery": {
-        "title": "Delivery Chaos",
-        "description": "Missed phone orders. 3PD commission bleed. Revenue leaking through channels you can't monitor at scale."
+        "title": "Disconnected Guests",
+        "description": "No memory. No personalization. Guests visit once and vanish. Without a hospitality system, your best customers are strangers every time."
       },
       "burnout": {
-        "title": "Staff Burnout",
-        "description": "Your best managers are drowning in operational drag instead of leading their teams and growing your brand."
+        "title": "Operator Burnout",
+        "description": "Your managers are human bridges between fragmented tools, making $5,000 decisions at midnight. The cognitive tax of scale is crushing your best people."
       }
     }
   },
   "solutions": {
-    "eyebrow": "Meet Your New Teammates",
-    "headline": "Two AI Teammates. One Calmer Operation.",
-    "description": "Unlike traditional restaurant management software, FoodTech AI doesn't add another dashboard. It adds a teammate.",
+    "eyebrow": "The Innovation",
+    "headline": "Two AI Agents. One WhatsApp Chat. Zero New Apps.",
+    "description": "No dashboards. No training manuals. No new software to learn. Just two intelligent agents that live where you already work—WhatsApp.",
     "xtock": {
-      "badge": "Back of House",
+      "badge": "Inventory Intelligence",
       "name": "Xtock",
-      "tagline": "Predictive inventory ordering that learns your operation.",
-      "aeo": "Xtock by FoodTech AI is a predictive inventory ordering system that uses AI to eliminate ordering guesswork for restaurants.",
+      "tagline": "Your inventory texts you.",
+      "description": "Xtock tracks your inventory in real-time, predicts your sales, and sends you order reminders via WhatsApp before you run out. Precision in every gram.",
       "features": [
-        "Saves 45 minutes per day on ordering decisions",
-        "100% human-in-the-loop — you approve every order via WhatsApp",
-        "Learns your seasonal patterns, vendor lead times, and waste history"
-      ],
-      "seeWhatsApp": "See it in WhatsApp"
+        "Real-time inventory tracking across all locations",
+        "Predictive sales forecasting that learns your patterns",
+        "WhatsApp order reminders before you run out"
+      ]
     },
     "vostre": {
-      "badge": "Front of House",
+      "badge": "Guest Hospitality",
       "name": "Vostre",
-      "tagline": "AI voice agent that never misses an order.",
-      "aeo": "Vostre by FoodTech AI is an AI voice agent that handles phone and WhatsApp orders for restaurants 24/7.",
+      "tagline": "Hospitality on autopilot.",
+      "description": "Vostre is your digital concierge. It manages reservations and automates personalized guest loyalty through WhatsApp. Give every guest a 5-star experience, automatically.",
       "features": [
-        "Handles phone and WhatsApp orders 24/7",
-        "Zero missed orders — zero 3PD commissions on direct calls",
-        "Saves thousands per month in recovered revenue"
-      ],
-      "seeWhatsApp": "See it in WhatsApp"
+        "Automated reservation management via WhatsApp",
+        "Personalized guest loyalty and recognition",
+        "5-star hospitality experience on autopilot"
+      ]
     }
   },
   "howItWorks": {
@@ -75,7 +85,7 @@
       "learn": {
         "title": "Learn",
         "timeline": "Days 2–3",
-        "description": "48-hour \"Time to Value\" shift study. Your AI teammate observes your operation and builds its understanding."
+        "description": "48-hour \"Time to Value\" shift study. Your AI teammates observe your operation and build their understanding."
       },
       "verify": {
         "title": "Verify",
@@ -129,7 +139,7 @@
   },
   "cta": {
     "headline": "Stop Managing Software. Start Onboarding Your New Teammates.",
-    "description": "Join our Founding Pilot Waitlist. Priority given to 4–15 unit groups.",
+    "description": "Join our Founding Pilot Waitlist. Priority given to restaurant operators in Mexico.",
     "disclaimer": "No credit card. No contracts. Just a conversation."
   },
   "form": {
@@ -154,7 +164,7 @@
     "errorLocations": "Please select a range"
   },
   "footer": {
-    "tagline": "AI teammates for multi-unit restaurant operators.",
+    "tagline": "AI teammates for the Mexican restaurant market.",
     "quickLinks": "Quick Links",
     "contact": "Contact",
     "home": "Home",
@@ -171,5 +181,18 @@
     "openChat": "Open chat",
     "closeChat": "Close chat",
     "sendMessage": "Send message"
+  },
+  "whatsapp": {
+    "ariaLabel": "Chat with us on WhatsApp",
+    "notification": "1",
+    "hoverMessage": "Vostre AI is online. Ready to optimize your dinner service?"
+  },
+  "builtFromInside": {
+    "eyebrow": "Our Approach",
+    "headline": "Built From the Inside of Restaurant Operations.",
+    "description": "FoodTech AI was created to solve the problems restaurant teams face every day: uncertainty, manual decision-making, and operational overload. We build AI-native systems designed to integrate into real restaurant workflows, not disrupt them.",
+    "paragraph2": "Our approach prioritizes transparency, operator control, and trust, so teams can act with confidence instead of reacting to problems after they happen.",
+    "callout": "This isn't AI for dashboards or demos. It's AI designed to work quietly, reliably, and alongside the people running the business.",
+    "imagePlaceholder": "Restaurant owner working at their desk"
   }
 }
