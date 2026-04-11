@@ -2,12 +2,17 @@
 
 import { motion } from "framer-motion";
 import { ChevronDown, Flame, Smartphone } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { GrainOverlay } from "@/components/ui/GrainOverlay";
+import { CursorGlow } from "@/components/ui/CursorGlow";
+import { AnimateIn } from "@/components/ui/AnimateIn";
 import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { getSlot } from "@/lib/image-config";
 
 export const Hero = () => {
+  const t = useTranslations("hero");
   const leftSlot = getSlot("hero-bg-left");
   const rightSlot = getSlot("hero-bg-right");
 
@@ -16,7 +21,17 @@ export const Hero = () => {
       id="hero"
       className="relative flex min-h-screen items-center overflow-hidden bg-navy pt-20"
     >
-      {/* Atmospheric background accents — desktop only */}
+      <GrainOverlay />
+      <CursorGlow />
+
+      <div
+        aria-hidden="true"
+        className="absolute top-[35%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] z-0"
+        style={{
+          background: 'radial-gradient(ellipse, rgba(163,177,138,0.08) 0%, transparent 70%)',
+        }}
+      />
+
       <div
         className="pointer-events-none absolute inset-y-[10%] left-[-10%] hidden w-[35%] lg:block"
         style={{
@@ -54,7 +69,6 @@ export const Hero = () => {
         />
       </div>
 
-      {/* Mobile subtle background */}
       <div
         className="pointer-events-none absolute inset-0 lg:hidden"
         style={{ opacity: 0.08 }}
@@ -69,40 +83,38 @@ export const Hero = () => {
       </div>
 
       <Container className="relative z-10 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
+        <AnimateIn direction="up" delay={0}>
           <h1 className="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-[3.75rem]">
-            Operational Empathy for the
-            <br className="hidden sm:block" /> Multi-Unit Brand.
+            {t("headline")}
           </h1>
+        </AnimateIn>
+        <AnimateIn direction="up" delay={0.15}>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-cream/75 md:text-xl">
-            Your restaurant doesn&apos;t need more software. It needs a better
-            teammate. Scale your 4–15 unit group with calm, AI-native precision.
+            {t("subheadline")}
           </p>
+        </AnimateIn>
+        <AnimateIn direction="up" delay={0.25}>
           <p className="mx-auto mt-4 max-w-3xl text-sm text-cream/50">
-            FoodTech AI builds AI teammates — Xtock for predictive inventory and
-            Vostre for voice ordering — that remove operational drag for 4–15 unit
-            fast-casual restaurant groups.
+            {t("aeo")}
           </p>
+        </AnimateIn>
+        <AnimateIn direction="up" delay={0.35}>
           <div className="mt-10">
             <Button as="a" href="#waitlist" size="lg">
-              Apply for Pilot Access
+              {t("cta")}
             </Button>
           </div>
-        </motion.div>
+        </AnimateIn>
       </Container>
 
       <motion.a
         href="#problem"
-        aria-label="Scroll to next section"
+        aria-label={t("scrollLabel")}
         className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2"
-        animate={{ y: [0, 8, 0] }}
+        animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
       >
-        <ChevronDown className="h-8 w-8 text-cream/40" />
+        <ChevronDown className="h-8 w-8 text-cream/50" />
       </motion.a>
     </section>
   );

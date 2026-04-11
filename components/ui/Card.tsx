@@ -5,8 +5,8 @@ interface CardProps {
 }
 
 const variantClasses = {
-  dark: "bg-charcoal border border-white/10 text-cream",
-  light: "bg-white border border-navy/5 text-navy shadow-lg",
+  dark: "bg-charcoal border border-white/10 text-cream shadow-lg transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl",
+  light: "bg-white border border-navy/5 text-navy shadow-lg transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl",
 };
 
 export const Card = ({ children, className = "", variant = "dark" }: CardProps) => (

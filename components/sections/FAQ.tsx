@@ -1,25 +1,39 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { Container } from "@/components/ui/Container";
 import { Accordion } from "@/components/ui/Accordion";
-import { FAQ_ITEMS } from "@/lib/constants";
+import { AnimateIn } from "@/components/ui/AnimateIn";
 
-export const FAQ = () => (
-  <SectionWrapper id="faq" bg="navy">
-    <Container className="max-w-3xl">
-      <div className="text-center">
-        <p className="text-sm font-semibold uppercase tracking-widest text-sage">
-          Questions &amp; Trust
-        </p>
-        <h2 className="mt-4 font-heading text-3xl font-bold text-white md:text-[3rem]">
-          Built for Operators Who&apos;ve Been Burned by Software Before.
-        </h2>
-      </div>
+const FAQ_KEYS = ["badDecision", "onboarding", "integrations", "trial", "security", "pricing"] as const;
 
-      <div className="mt-12">
-        <Accordion items={FAQ_ITEMS} />
-      </div>
-    </Container>
-  </SectionWrapper>
-);
+export const FAQ = () => {
+  const t = useTranslations("faq");
+
+  const items = FAQ_KEYS.map((key) => ({
+    question: t(`items.${key}.question`),
+    answer: t(`items.${key}.answer`),
+  }));
+
+  return (
+    <SectionWrapper id="faq" bg="navy" grain cursorGlow>
+      <Container className="max-w-3xl">
+        <AnimateIn>
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-widest text-sage">
+              {t("eyebrow")}
+            </p>
+            <h2 className="mt-4 font-heading text-3xl font-bold text-white md:text-[3rem]">
+              {t("headline")}
+            </h2>
+          </div>
+        </AnimateIn>
+
+        <div className="mt-12">
+          <Accordion items={items} />
+        </div>
+      </Container>
+    </SectionWrapper>
+  );
+};

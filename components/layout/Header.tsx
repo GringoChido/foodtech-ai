@@ -3,10 +3,20 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { NAV_ITEMS } from "@/lib/constants";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
+import { LanguageToggle } from "@/components/layout/LanguageToggle";
+
+const NAV_KEYS = [
+  { key: "problem", href: "#problem" },
+  { key: "solutions", href: "#solutions" },
+  { key: "howItWorks", href: "#how-it-works" },
+  { key: "about", href: "#founder" },
+  { key: "faq", href: "#faq" },
+] as const;
 
 export const Header = () => {
+  const t = useTranslations("nav");
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
@@ -46,18 +56,19 @@ export const Header = () => {
           FoodTech AI
         </a>
 
-        <div className="hidden items-center gap-8 md:flex">
-          {NAV_ITEMS.map((item) => (
+        <div className="hidden items-center gap-6 md:flex">
+          {NAV_KEYS.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-cream/70 transition-colors hover:text-cream"
+              className="relative text-sm font-medium text-cream/70 transition-colors hover:text-cream after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-sage after:transition-all after:duration-300 hover:after:w-full"
             >
-              {item.label}
+              {t(item.key)}
             </a>
           ))}
+          <LanguageToggle />
           <Button as="a" href="#waitlist" size="sm">
-            Apply for Pilot Access
+            {t("cta")}
           </Button>
         </div>
 
@@ -81,23 +92,26 @@ export const Header = () => {
             className="border-t border-white/10 bg-navy px-4 pb-6 pt-4 md:hidden"
           >
             <div className="flex flex-col gap-4">
-              {NAV_ITEMS.map((item) => (
+              {NAV_KEYS.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsMobileOpen(false)}
                   className="rounded-lg px-3 py-2 text-base font-medium text-cream/80 transition-colors hover:bg-white/5 hover:text-cream"
                 >
-                  {item.label}
+                  {t(item.key)}
                 </a>
               ))}
+              <div className="flex items-center gap-4 px-3">
+                <LanguageToggle />
+              </div>
               <Button
                 as="a"
                 href="#waitlist"
                 size="md"
                 className="mt-2 w-full text-center"
               >
-                Apply for Pilot Access
+                {t("cta")}
               </Button>
             </div>
           </motion.div>

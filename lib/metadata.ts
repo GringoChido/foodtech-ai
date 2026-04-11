@@ -63,5 +63,9 @@ export const siteMetadata: Metadata = {
   },
   alternates: {
     canonical: "https://www.foodtechai.net",
+    languages: {
+      es: "https://www.foodtechai.net",
+      en: "https://www.foodtechai.net/en",
+    },
   },
 };

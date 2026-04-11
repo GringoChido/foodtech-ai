@@ -64,6 +64,59 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-navy);
 }
 
+/* Grain texture animation */
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -10%); }
+  20% { transform: translate(-15%, 5%); }
+  30% { transform: translate(7%, -25%); }
+  40% { transform: translate(-5%, 25%); }
+  50% { transform: translate(-15%, 10%); }
+  60% { transform: translate(15%, 0%); }
+  70% { transform: translate(0%, 15%); }
+  80% { transform: translate(3%, 35%); }
+  90% { transform: translate(-10%, 10%); }
+}
+
+/* Button shimmer on hover */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.12) 50%,
+    transparent 100%
+  );
+  transform: rotate(30deg) translateX(-200%);
+}
+.btn-shimmer:hover::after {
+  transform: rotate(30deg) translateX(200%);
+  transition: transform 600ms ease;
+}
+
+/* CTA animated gradient */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.cta-animated-gradient {
+  background: linear-gradient(135deg, #A3B18A 0%, #8A9A72 30%, #A3B18A 60%, #92A87E 100%);
+  background-size: 300% 300%;
+  animation: gradient-shift 10s ease infinite;
+}
+
+/* Image placeholder animations */
 @keyframes gradientDrift {
   0% {
     background-position: 0% 50%;
@@ -80,4 +133,16 @@ h1, h2, h3, h4, h5, h6 {
   100% {
     transform: translate(20%, 20%) scale(1.2);
   }
+}
+
+/* Chatbot FAB pulse */
+@keyframes fab-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(163, 177, 138, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(163, 177, 138, 0); }
+}
+
+/* Typing indicator bounce */
+@keyframes typing-bounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-4px); }
 }

@@ -1,0 +1,175 @@
+{
+  "nav": {
+    "problem": "Problema",
+    "solutions": "Soluciones",
+    "howItWorks": "Cómo Funciona",
+    "about": "Nosotros",
+    "faq": "Preguntas",
+    "cta": "Solicitar Acceso Piloto"
+  },
+  "hero": {
+    "headline": "Empatía Operacional para la Marca Multi-Unidad.",
+    "subheadline": "Tu restaurante no necesita más software. Necesita un mejor compañero de equipo. Escala tu grupo de 4–15 unidades con precisión calmada y nativa de IA.",
+    "aeo": "FoodTech AI construye compañeros de equipo con IA — Xtock para inventario predictivo y Vostre para pedidos por voz — que eliminan la carga operacional para grupos de comida rápida casual de 4–15 unidades.",
+    "cta": "Solicitar Acceso Piloto",
+    "scrollLabel": "Desplazar a la siguiente sección"
+  },
+  "problem": {
+    "eyebrow": "La Trampa Multi-Unidad",
+    "headline": "La Brecha de Ejecución Te Está Costando",
+    "statLabel": "/mes por ubicación en márgenes recuperados",
+    "description": "Tus gerentes están agotados — actuando como puentes humanos entre herramientas fragmentadas, tomando decisiones de inventario de $5,000 a medianoche, y absorbiendo el \"impuesto de gestión\" que viene con escalar más allá de 4 unidades.",
+    "cards": {
+      "ordering": {
+        "title": "Pedidos a Ciegas",
+        "description": "Decisiones de inventario manuales hechas cansado, tarde y sin datos. El desperdicio se acumula silenciosamente en cada ubicación."
+      },
+      "delivery": {
+        "title": "Caos en Entregas",
+        "description": "Pedidos telefónicos perdidos. Sangrado de comisiones 3PD. Ingresos fugándose por canales que no puedes monitorear a escala."
+      },
+      "burnout": {
+        "title": "Agotamiento del Personal",
+        "description": "Tus mejores gerentes se ahogan en carga operacional en lugar de liderar sus equipos y hacer crecer tu marca."
+      }
+    }
+  },
+  "solutions": {
+    "eyebrow": "Conoce a Tus Nuevos Compañeros",
+    "headline": "Dos Compañeros de IA. Una Operación Más Tranquila.",
+    "description": "A diferencia del software tradicional de gestión de restaurantes, FoodTech AI no agrega otro tablero. Agrega un compañero de equipo.",
+    "xtock": {
+      "badge": "Back of House",
+      "name": "Xtock",
+      "tagline": "Pedidos de inventario predictivo que aprenden tu operación.",
+      "aeo": "Xtock de FoodTech AI es un sistema de pedidos de inventario predictivo que usa IA para eliminar las conjeturas en los pedidos para restaurantes.",
+      "features": [
+        "Ahorra 45 minutos al día en decisiones de pedidos",
+        "100% humano en el circuito — apruebas cada pedido vía WhatsApp",
+        "Aprende tus patrones estacionales, tiempos de entrega de proveedores e historial de desperdicio"
+      ],
+      "seeWhatsApp": "Vélo en WhatsApp"
+    },
+    "vostre": {
+      "badge": "Front of House",
+      "name": "Vostre",
+      "tagline": "Agente de voz con IA que nunca pierde un pedido.",
+      "aeo": "Vostre de FoodTech AI es un agente de voz con IA que maneja pedidos por teléfono y WhatsApp para restaurantes 24/7.",
+      "features": [
+        "Maneja pedidos por teléfono y WhatsApp 24/7",
+        "Cero pedidos perdidos — cero comisiones 3PD en llamadas directas",
+        "Ahorra miles por mes en ingresos recuperados"
+      ],
+      "seeWhatsApp": "Vélo en WhatsApp"
+    }
+  },
+  "howItWorks": {
+    "eyebrow": "Cómo Funciona",
+    "headline": "De Apretón de Manos a Compañero en 8 Días.",
+    "steps": {
+      "connect": {
+        "title": "Conectar",
+        "timeline": "Día 1",
+        "description": "Incorporación de guante blanco de 24 horas. Nos conectamos a tus sistemas de POS e inventario. No mueves un dedo."
+      },
+      "learn": {
+        "title": "Aprender",
+        "timeline": "Días 2–3",
+        "description": "Estudio de turnos de 48 horas \"Tiempo al Valor\". Tu compañero de IA observa tu operación y construye su comprensión."
+      },
+      "verify": {
+        "title": "Verificar",
+        "timeline": "Días 3–8",
+        "description": "Fase de Confianza de 7 días. Cada decisión requiere tu aprobación vía WhatsApp. **100% poder de veto humano.**"
+      },
+      "execute": {
+        "title": "Ejecutar",
+        "timeline": "Día 8+",
+        "description": "La opción de autonomía total se desbloquea después del Día 8. O mantén el humano en el circuito para siempre. Tú decides."
+      }
+    }
+  },
+  "founder": {
+    "eyebrow": "Por Qué Lo Construimos",
+    "headline": "20 Años en las Trincheras.",
+    "quote1": "He pasado 20 años en esta industria — no detrás de una pantalla, sino detrás de una línea. Sé lo que se siente terminar de limpiar una cocina grasienta a las 11 PM y luego sentarse a tomar decisiones de inventario de $5,000 cuando apenas puedes mantener los ojos abiertos.",
+    "quote2": "Ese es el momento para el que construí FoodTech AI. No la sala de juntas. No el pitch para inversores. El momento de medianoche cuando un operador cansado necesita un compañero que ya hizo las cuentas.",
+    "quote3": "No construimos software. Construimos compañeros de equipo con IA que eliminan la carga operacional que impide a los buenos operadores convertirse en grandes marcas.",
+    "attribution": "— Felipe Gómez, Fundador"
+  },
+  "faq": {
+    "eyebrow": "Preguntas y Confianza",
+    "headline": "Construido para Operadores que Han Sido Quemados por el Software Antes.",
+    "items": {
+      "badDecision": {
+        "question": "¿Qué pasa si la IA toma una mala decisión de pedido?",
+        "answer": "No puede — no sin tu aprobación. Durante la Fase de Confianza de 7 días, cada decisión pasa por ti vía WhatsApp. Después del Día 8, tú eliges tu nivel de autonomía. Y siempre retienes 100% de poder de veto, para siempre."
+      },
+      "onboarding": {
+        "question": "¿Cuánto tarda la incorporación?",
+        "answer": "24 horas para conectar. 48 horas para aprender. 7 días para construir confianza. Verás valor desde el primer estudio de turnos."
+      },
+      "integrations": {
+        "question": "¿Con qué sistemas se integran?",
+        "answer": "Ofrecemos acreditación de guante blanco y nos conectamos a los principales sistemas de POS e inventario. Manejamos toda la configuración técnica — no necesitas un equipo de TI."
+      },
+      "trial": {
+        "question": "¿Cómo es una prueba?",
+        "answer": "Prueba de 30 días de Xtock. Prueba de 7 días de Vostre. Sin contratos. Sin tarifas de configuración. Si no se paga solo, te vas."
+      },
+      "security": {
+        "question": "¿Mis datos están seguros?",
+        "answer": "Cifrado de nivel empresarial en tránsito y en reposo. Nunca vendemos tus datos. Nunca entrenamos con tus datos. Tu inteligencia operacional sigue siendo tuya."
+      },
+      "pricing": {
+        "question": "¿Cuál es el modelo de precios?",
+        "answer": "Compartiremos precios específicos durante tu llamada de incorporación al piloto. Nuestro modelo está diseñado para que la IA se pague sola dentro del primer mes a través de márgenes recuperados y reducción de desperdicio."
+      }
+    }
+  },
+  "cta": {
+    "headline": "Deja de Gestionar Software. Empieza a Incorporar a Tus Nuevos Compañeros.",
+    "description": "Únete a nuestra Lista de Espera del Piloto Fundador. Prioridad para grupos de 4–15 unidades.",
+    "disclaimer": "Sin tarjeta de crédito. Sin contratos. Solo una conversación."
+  },
+  "form": {
+    "name": "Nombre Completo",
+    "email": "Correo Electrónico",
+    "company": "Empresa / Nombre de Marca",
+    "locations": "Seleccionar rango",
+    "locationOptions": {
+      "1-3": "1–3 ubicaciones",
+      "4-7": "4–7 ubicaciones",
+      "8-15": "8–15 ubicaciones",
+      "16+": "16+ ubicaciones"
+    },
+    "submit": "Unirse a la Lista de Espera del Piloto Fundador",
+    "submitting": "Enviando...",
+    "successTitle": "Estás en la lista.",
+    "successMessage": "Te contactaremos dentro de 48 horas.",
+    "errorServer": "Algo salió mal. Por favor intenta de nuevo.",
+    "errorName": "El nombre completo es requerido",
+    "errorEmail": "Por favor ingresa un correo válido",
+    "errorCompany": "El nombre de la empresa es requerido",
+    "errorLocations": "Por favor selecciona un rango"
+  },
+  "footer": {
+    "tagline": "Compañeros de IA para operadores de restaurantes multi-unidad.",
+    "quickLinks": "Enlaces Rápidos",
+    "contact": "Contacto",
+    "home": "Inicio",
+    "apply": "Aplicar",
+    "copyright": "© {year} FoodTech AI. Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "builtBy": "Construido por"
+  },
+  "chat": {
+    "title": "FoodTech AI",
+    "subtitle": "Asistente Virtual",
+    "placeholder": "Escribe un mensaje...",
+    "openChat": "Abrir chat",
+    "closeChat": "Cerrar chat",
+    "sendMessage": "Enviar mensaje"
+  }
+}
