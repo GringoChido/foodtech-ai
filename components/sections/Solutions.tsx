@@ -1,15 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { PackageCheck, Phone } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { Container } from "@/components/ui/Container";
-import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { AnimateIn } from "@/components/ui/AnimateIn";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
-import { getSlot } from "@/lib/image-config";
 
 interface ChatBubbleProps {
   text: string;
@@ -45,43 +41,55 @@ const messageVariants = {
   },
 };
 
-const WhatsAppMockup = ({
+const PhoneFrame = ({
   contactName,
   messages,
+  rotate,
 }: {
   contactName: string;
   messages: ChatBubbleProps[];
+  rotate: string;
 }) => (
-  <div className="overflow-hidden rounded-xl border border-navy/10 shadow-md">
-    <div className="flex items-center gap-3 bg-[#075E54] px-4 py-3">
-      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 text-xs font-bold text-white">
-        {contactName[0]}
-      </div>
-      <div>
-        <p className="text-sm font-medium text-white">{contactName}</p>
-        <p className="text-[10px] text-white/60">online</p>
+  <div className={`mx-auto max-w-[320px] ${rotate}`}>
+    {/* Phone bezel */}
+    <div className="rounded-[2rem] border-2 border-navy/10 bg-navy/5 p-2 shadow-2xl">
+      {/* Notch */}
+      <div className="mx-auto mb-1 h-5 w-24 rounded-full bg-navy/10" />
+      {/* Screen */}
+      <div className="overflow-hidden rounded-[1.25rem]">
+        {/* WhatsApp header */}
+        <div className="flex items-center gap-3 bg-[#075E54] px-4 py-3">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 text-xs font-bold text-white">
+            {contactName[0]}
+          </div>
+          <div>
+            <p className="text-sm font-medium text-white">{contactName}</p>
+            <p className="text-[10px] text-white/60">online</p>
+          </div>
+        </div>
+        {/* Messages */}
+        <motion.div
+          variants={messageContainerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          className="flex flex-col gap-2.5 bg-[#ECE5DD] p-4"
+        >
+          {messages.map((msg, i) => (
+            <motion.div key={i} variants={messageVariants}>
+              <ChatBubble {...msg} />
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </div>
-    <motion.div
-      variants={messageContainerVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-50px" }}
-      className="flex flex-col gap-2.5 bg-[#ECE5DD] p-4"
-    >
-      {messages.map((msg, i) => (
-        <motion.div key={i} variants={messageVariants}>
-          <ChatBubble {...msg} />
-        </motion.div>
-      ))}
-    </motion.div>
   </div>
 );
 
 const xtockMessages: ChatBubbleProps[] = [
   { text: "Good morning! Based on this week's sales trends and your Thursday rush pattern, here's your suggested produce order for Sysco:", time: "8:02 AM", incoming: true },
   { text: "Romaine lettuce: 24 cases\nTomatoes: 18 cases\nAvocados: 12 cases\nTotal: $1,847", time: "8:02 AM", incoming: true },
-  { text: "Looks good, send it 👍", time: "8:04 AM" },
+  { text: "Looks good, send it", time: "8:04 AM" },
   { text: "Done! Order confirmed with Sysco. Delivery set for Thursday 6 AM.", time: "8:04 AM", incoming: true },
 ];
 
@@ -95,8 +103,6 @@ const vostreMessages: ChatBubbleProps[] = [
 
 export const Solutions = () => {
   const t = useTranslations("solutions");
-  const xtockSlot = getSlot("solutions-xtock-context");
-  const vostreSlot = getSlot("solutions-vostre-context");
 
   const xtockFeatures: string[] = [
     t("xtock.features.0"),
@@ -128,7 +134,7 @@ export const Solutions = () => {
 
         <div className="mt-16 grid gap-8 lg:grid-cols-2">
           <AnimateIn direction="left">
-            <Card variant="light" className="h-full">
+            <div className="h-full rounded-2xl bg-white border border-navy/5 p-6 md:p-8 shadow-lg transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl">
               <Badge className="bg-sage/20 text-sage-hover">{t("xtock.badge")}</Badge>
               <h3 className="mt-4 font-heading text-2xl font-bold text-navy md:text-[1.875rem]">
                 {t("xtock.name")}
@@ -144,32 +150,14 @@ export const Solutions = () => {
                 ))}
               </ul>
 
-              <div className="relative mt-6 overflow-hidden rounded-lg shadow-[inset_0_0_40px_rgba(0,0,0,0.3)]">
-                <ImagePlaceholder
-                  id="solutions-xtock-context"
-                  alt={xtockSlot?.alt.en ?? ""}
-                  aspectRatio="4:3"
-                  mood="cool"
-                  icon={PackageCheck}
-                  label="In action"
-                  src={xtockSlot?.src}
-                  className="!rounded-lg h-[180px] !aspect-auto"
-                />
-                <div className="pointer-events-none absolute inset-0 bg-sage/10 mix-blend-multiply" />
+              <div className="mt-8">
+                <PhoneFrame contactName="Xtock" messages={xtockMessages} rotate="rotate-1" />
               </div>
-
-              <p className="mt-3 mb-1 text-center text-[10px] font-medium uppercase tracking-widest text-navy/30">
-                &#8595; {t("xtock.seeWhatsApp")}
-              </p>
-
-              <div className="rounded-[1.5rem] border border-gray-300/30 shadow-2xl overflow-hidden rotate-1">
-                <WhatsAppMockup contactName="Xtock" messages={xtockMessages} />
-              </div>
-            </Card>
+            </div>
           </AnimateIn>
 
           <AnimateIn direction="right">
-            <Card variant="light" className="h-full">
+            <div className="h-full rounded-2xl bg-white border border-navy/5 p-6 md:p-8 shadow-lg transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl">
               <Badge className="bg-sage/20 text-sage-hover">{t("vostre.badge")}</Badge>
               <h3 className="mt-4 font-heading text-2xl font-bold text-navy md:text-[1.875rem]">
                 {t("vostre.name")}
@@ -185,28 +173,10 @@ export const Solutions = () => {
                 ))}
               </ul>
 
-              <div className="relative mt-6 overflow-hidden rounded-lg shadow-[inset_0_0_40px_rgba(0,0,0,0.3)]">
-                <ImagePlaceholder
-                  id="solutions-vostre-context"
-                  alt={vostreSlot?.alt.en ?? ""}
-                  aspectRatio="4:3"
-                  mood="cool"
-                  icon={Phone}
-                  label="In action"
-                  src={vostreSlot?.src}
-                  className="!rounded-lg h-[180px] !aspect-auto"
-                />
-                <div className="pointer-events-none absolute inset-0 bg-sage/10 mix-blend-multiply" />
+              <div className="mt-8">
+                <PhoneFrame contactName="Vostre" messages={vostreMessages} rotate="-rotate-1" />
               </div>
-
-              <p className="mt-3 mb-1 text-center text-[10px] font-medium uppercase tracking-widest text-navy/30">
-                &#8595; {t("vostre.seeWhatsApp")}
-              </p>
-
-              <div className="rounded-[1.5rem] border border-gray-300/30 shadow-2xl overflow-hidden -rotate-1">
-                <WhatsAppMockup contactName="Vostre" messages={vostreMessages} />
-              </div>
-            </Card>
+            </div>
           </AnimateIn>
         </div>
       </Container>

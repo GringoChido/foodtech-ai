@@ -1,58 +1,28 @@
 "use client";
 
-import { User, Clock } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { GrainOverlay } from "@/components/ui/GrainOverlay";
 import { Container } from "@/components/ui/Container";
 import { AnimateIn } from "@/components/ui/AnimateIn";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
-import { getSlot } from "@/lib/image-config";
+
+const InitialsAvatar = () => (
+  <div className="flex h-32 w-32 items-center justify-center rounded-full border-2 border-sage/30 bg-charcoal shadow-[0_0_60px_rgba(163,177,138,0.15)] transition-all duration-300 hover:border-sage/50 hover:shadow-[0_0_80px_rgba(163,177,138,0.25)]">
+    <span className="font-heading text-4xl font-extrabold text-sage">FG</span>
+  </div>
+);
 
 export const FounderStory = () => {
   const t = useTranslations("founder");
-  const portraitSlot = getSlot("founder-portrait");
-  const kitchenSlot = getSlot("founder-kitchen");
 
   return (
     <section id="founder" className="relative overflow-hidden bg-charcoal py-20 md:py-28 lg:py-32">
       <GrainOverlay />
 
-      <div className="pointer-events-none absolute inset-0 hidden md:block" style={{ opacity: 0.08 }}>
-        <ImagePlaceholder
-          id="founder-kitchen"
-          alt={kitchenSlot?.alt.en ?? ""}
-          aspectRatio="16:9"
-          mood="warm"
-          icon={Clock}
-          src={kitchenSlot?.src}
-          className="h-full w-full !rounded-none !aspect-auto mix-blend-lighten"
-        />
-      </div>
-      <div className="pointer-events-none absolute inset-0 md:hidden" style={{ opacity: 0.05 }}>
-        <ImagePlaceholder
-          id="founder-kitchen-mobile"
-          alt=""
-          aspectRatio="16:9"
-          mood="warm"
-          className="h-full w-full !rounded-none !aspect-auto"
-        />
-      </div>
-
       <Container className="relative z-[2]">
         <div className="grid items-center gap-12 lg:grid-cols-5">
+          {/* Mobile portrait */}
           <AnimateIn className="flex justify-center lg:hidden">
-            <div className="w-[60%] max-w-[280px]">
-              <ImagePlaceholder
-                id="founder-portrait"
-                alt={portraitSlot?.alt.en ?? ""}
-                aspectRatio="4:5"
-                mood="warm"
-                icon={User}
-                label="Felipe Gómez"
-                src={portraitSlot?.src}
-                className="border border-sage/20 shadow-[0_0_60px_rgba(163,177,138,0.15)]"
-              />
-            </div>
+            <InitialsAvatar />
           </AnimateIn>
 
           <div className="lg:col-span-3">
@@ -90,19 +60,9 @@ export const FounderStory = () => {
             </AnimateIn>
           </div>
 
+          {/* Desktop portrait */}
           <AnimateIn direction="right" delay={0.2} className="hidden justify-center lg:col-span-2 lg:flex">
-            <div className="max-w-[380px]">
-              <ImagePlaceholder
-                id="founder-portrait"
-                alt={portraitSlot?.alt.en ?? ""}
-                aspectRatio="4:5"
-                mood="warm"
-                icon={User}
-                label="Felipe Gómez"
-                src={portraitSlot?.src}
-                className="border border-sage/20 shadow-[0_0_60px_rgba(163,177,138,0.15)] transition-all duration-300 hover:border-sage/40 hover:shadow-[0_0_80px_rgba(163,177,138,0.25)]"
-              />
-            </div>
+            <InitialsAvatar />
           </AnimateIn>
         </div>
       </Container>

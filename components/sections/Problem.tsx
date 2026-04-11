@@ -1,15 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ShoppingCart, Truck, UserX, LayoutDashboard } from "lucide-react";
+import { ShoppingCart, Truck, UserX } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { Container } from "@/components/ui/Container";
-import { Card } from "@/components/ui/Card";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { StatCallout } from "@/components/ui/StatCallout";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
-import { getSlot } from "@/lib/image-config";
 
 const problemIcons = [ShoppingCart, Truck, UserX];
 const problemKeys = ["ordering", "delivery", "burnout"] as const;
@@ -26,7 +23,6 @@ const cardVariants = {
 
 export const Problem = () => {
   const t = useTranslations("problem");
-  const stripSlot = getSlot("problem-hero");
 
   return (
     <SectionWrapper id="problem" bg="navy" grain cursorGlow>
@@ -56,36 +52,19 @@ export const Problem = () => {
           </p>
         </AnimateIn>
 
-        <AnimateIn className="my-10">
-          <div className="relative mx-auto max-w-6xl overflow-hidden rounded-xl border border-white/10">
-            <ImagePlaceholder
-              id="problem-hero"
-              alt={stripSlot?.alt.en ?? ""}
-              aspectRatio="21:9"
-              mood="warm"
-              icon={LayoutDashboard}
-              label="The management tax"
-              src={stripSlot?.src}
-              className="md:!aspect-[21/9] !aspect-video"
-            />
-            <div className="pointer-events-none absolute inset-0 bg-navy/60 mix-blend-multiply" />
-            <div className="pointer-events-none absolute inset-0 bg-terracotta/10 mix-blend-screen" />
-          </div>
-        </AnimateIn>
-
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
-          className="grid gap-6 md:grid-cols-3"
+          className="mt-12 grid gap-6 md:grid-cols-3"
         >
           {problemKeys.map((key, i) => {
             const Icon = problemIcons[i];
             return (
               <motion.div key={key} variants={cardVariants}>
-                <Card className="h-full border-t-2 border-t-terracotta/60">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-terracotta/10">
+                <div className="h-full rounded-2xl bg-charcoal border border-white/10 p-6 md:p-8 shadow-lg transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl hover:border-white/20">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-sage/10">
                     <Icon className="h-8 w-8 text-sage" />
                   </div>
                   <h3 className="mt-4 font-heading text-xl font-bold text-white">
@@ -94,7 +73,7 @@ export const Problem = () => {
                   <p className="mt-3 text-cream/65 leading-relaxed">
                     {t(`cards.${key}.description`)}
                   </p>
-                </Card>
+                </div>
               </motion.div>
             );
           })}

@@ -20,7 +20,7 @@ export const Footer = () => {
   const ambianceSlot = getSlot("footer-ambiance");
 
   return (
-    <footer className="relative overflow-hidden bg-charcoal pt-16 pb-8">
+    <footer className="relative overflow-hidden bg-navy pt-16 pb-8">
       <GrainOverlay />
 
       <div className="pointer-events-none absolute inset-0 hidden md:block" style={{ opacity: 0.06 }}>

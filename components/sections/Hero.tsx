@@ -1,86 +1,59 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ChevronDown, Flame, Smartphone } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { GrainOverlay } from "@/components/ui/GrainOverlay";
 import { CursorGlow } from "@/components/ui/CursorGlow";
 import { AnimateIn } from "@/components/ui/AnimateIn";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
-import { getSlot } from "@/lib/image-config";
 
 export const Hero = () => {
   const t = useTranslations("hero");
-  const leftSlot = getSlot("hero-bg-left");
-  const rightSlot = getSlot("hero-bg-right");
 
   return (
     <section
       id="hero"
       className="relative flex min-h-screen items-center overflow-hidden bg-navy pt-20"
     >
-      <GrainOverlay />
-      <CursorGlow />
+      {/* Layer 1: Base dark */}
+      <div className="absolute inset-0 bg-navy" />
 
+      {/* Layer 2: Warm ambient glow — simulates kitchen warmth */}
       <div
         aria-hidden="true"
-        className="absolute top-[35%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] z-0"
+        className="absolute inset-0"
         style={{
-          background: 'radial-gradient(ellipse, rgba(163,177,138,0.08) 0%, transparent 70%)',
+          background:
+            "radial-gradient(ellipse 80% 60% at 30% 40%, rgba(188,108,37,0.08) 0%, transparent 70%), radial-gradient(ellipse 60% 50% at 70% 60%, rgba(163,177,138,0.06) 0%, transparent 70%)",
         }}
       />
 
+      {/* Layer 3: Motion blur streaks — subtle horizontal light */}
       <div
-        className="pointer-events-none absolute inset-y-[10%] left-[-10%] hidden w-[35%] lg:block"
+        aria-hidden="true"
+        className="absolute inset-0 opacity-[0.04]"
         style={{
-          opacity: 0.15,
-          maskImage: "linear-gradient(to right, black 0%, transparent 100%)",
-          WebkitMaskImage: "linear-gradient(to right, black 0%, transparent 100%)",
+          background:
+            "linear-gradient(90deg, transparent 0%, rgba(245,241,235,0.3) 20%, transparent 40%, rgba(163,177,138,0.2) 60%, transparent 80%)",
         }}
-      >
-        <ImagePlaceholder
-          id="hero-bg-left"
-          alt={leftSlot?.alt.en ?? ""}
-          aspectRatio="3:4"
-          mood="warm"
-          icon={Flame}
-          src={leftSlot?.src}
-          className="h-full w-full !rounded-none !aspect-auto"
-        />
-      </div>
-      <div
-        className="pointer-events-none absolute inset-y-[10%] right-[-10%] hidden w-[35%] lg:block"
-        style={{
-          opacity: 0.15,
-          maskImage: "linear-gradient(to left, black 0%, transparent 100%)",
-          WebkitMaskImage: "linear-gradient(to left, black 0%, transparent 100%)",
-        }}
-      >
-        <ImagePlaceholder
-          id="hero-bg-right"
-          alt={rightSlot?.alt.en ?? ""}
-          aspectRatio="3:4"
-          mood="cool"
-          icon={Smartphone}
-          src={rightSlot?.src}
-          className="h-full w-full !rounded-none !aspect-auto"
-        />
-      </div>
+      />
 
+      {/* Layer 4: Grain texture */}
+      <GrainOverlay />
+
+      {/* Layer 5: Vignette */}
       <div
-        className="pointer-events-none absolute inset-0 lg:hidden"
-        style={{ opacity: 0.08 }}
-      >
-        <ImagePlaceholder
-          id="hero-bg-left-mobile"
-          alt=""
-          aspectRatio="16:9"
-          mood="warm"
-          className="h-full w-full !rounded-none !aspect-auto"
-        />
-      </div>
+        aria-hidden="true"
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 70% 60% at 50% 50%, transparent 40%, rgba(13,27,42,0.6) 100%)",
+        }}
+      />
+
+      <CursorGlow />
 
       <Container className="relative z-10 text-center">
         <AnimateIn direction="up" delay={0}>
