@@ -48,18 +48,18 @@ export const WaitlistForm = () => {
 
   if (submitted) {
     return (
-      <div className="rounded-2xl bg-navy/10 p-8 text-center" role="status">
-        <p className="font-heading text-2xl font-bold text-navy">
+      <div className="rounded-2xl border border-white/10 bg-white/[0.05] p-8 text-center" role="status">
+        <p className="font-heading text-2xl font-bold text-white">
           {t("successTitle")}
         </p>
-        <p className="mt-2 text-navy/70">{t("successMessage")}</p>
+        <p className="mt-2 text-white/60">{t("successMessage")}</p>
       </div>
     );
   }
 
   const inputClasses =
     "w-full rounded-lg border border-white/20 bg-navy px-4 py-3 text-white placeholder:text-cream/40 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/60 min-h-[48px]";
-  const errorClasses = "mt-1 text-xs text-red-600";
+  const errorClasses = "mt-1 text-sm text-red-400";
 
   return (
     <form
@@ -121,7 +121,7 @@ export const WaitlistForm = () => {
           id="wl-locations"
           aria-invalid={!!errors.locations}
           aria-describedby={errors.locations ? "wl-loc-err" : undefined}
-          className={`${inputClasses} appearance-none`}
+          className={`${inputClasses} appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20fill%3D%22none%22%20stroke%3D%22rgba(255%2C255%2C255%2C0.4)%22%20stroke-width%3D%222%22%3E%3Cpath%20d%3D%22m2%204%204%204%204-4%22%2F%3E%3C%2Fsvg%3E')] bg-[length:12px] bg-[right_16px_center] bg-no-repeat`}
           {...register("locations")}
         >
           <option value="">{t("locations")}</option>

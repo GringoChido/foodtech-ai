@@ -47,7 +47,7 @@ export const Footer = () => {
             <ul className="mt-4 flex flex-col gap-2">
               {quickLinks.map((link) => (
                 <li key={link.key}>
-                  <a href={link.href} className="text-sm text-cream/60 transition-colors hover:text-cream">
+                  <a href={link.href} className="inline-block py-2 text-sm text-cream/60 transition-colors hover:text-cream">
                     {link.label ?? t(link.key)}
                   </a>
                 </li>
@@ -59,7 +59,7 @@ export const Footer = () => {
             <p className="text-sm font-semibold uppercase tracking-wider text-cream/40">{t("contact")}</p>
             <ul className="mt-4 flex flex-col gap-2">
               <li>
-                <a href="mailto:hello@foodtechai.net" className="text-sm text-cream/60 transition-colors hover:text-cream">
+                <a href="mailto:hello@foodtechai.net" className="inline-block py-2 text-sm text-cream/60 transition-colors hover:text-cream">
                   hello@foodtechai.net
                 </a>
               </li>

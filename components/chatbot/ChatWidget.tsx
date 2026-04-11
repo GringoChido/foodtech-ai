@@ -101,7 +101,7 @@ export const ChatWidget = () => {
     <>
       <button
         onClick={isOpen ? () => setIsOpen(false) : handleOpen}
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-sage text-navy shadow-lg transition-all duration-200 hover:bg-sage-hover hover:scale-105 active:scale-95 cursor-pointer"
+        className="fixed bottom-6 left-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-sage text-navy shadow-lg transition-all duration-200 hover:bg-sage-hover hover:scale-105 active:scale-95 cursor-pointer"
         aria-label={isOpen ? t('closeChat') : t('openChat')}
         style={pulseCount < 3 ? { animation: 'fab-pulse 1.2s ease-in-out' } : undefined}
       >
@@ -115,8 +115,8 @@ export const ChatWidget = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-24 right-6 z-50 flex w-[380px] max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded-2xl border border-white/10 shadow-2xl"
-            style={{ height: '500px' }}
+            className="fixed bottom-24 left-6 z-50 flex w-[380px] max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded-2xl border border-white/10 shadow-2xl"
+            style={{ height: 'min(500px, calc(100vh - 120px))' }}
           >
             <div className="flex items-center gap-3 bg-navy px-4 py-3 border-b border-white/10">
               <div className="flex h-9 w-9 items-center justify-center rounded-full bg-sage/20">
@@ -178,12 +178,12 @@ export const ChatWidget = () => {
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={handleKeyDown}
                 placeholder={t('placeholder')}
-                className="flex-1 rounded-lg border-0 bg-gray-50 px-3 py-2 text-sm text-navy placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-sage"
+                className="flex-1 rounded-lg border-0 bg-gray-50 px-3 py-2 text-base text-navy placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-sage"
               />
               <button
                 onClick={() => handleSend()}
                 disabled={!input.trim()}
-                className="flex h-9 w-9 items-center justify-center rounded-lg bg-sage text-navy transition-colors hover:bg-sage-hover disabled:opacity-40 cursor-pointer"
+                className="flex h-11 w-11 items-center justify-center rounded-lg bg-sage text-navy transition-colors hover:bg-sage-hover disabled:opacity-40 cursor-pointer"
                 aria-label={t('sendMessage')}
               >
                 <Send className="h-4 w-4" />

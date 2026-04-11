@@ -16,7 +16,7 @@ export const LanguageToggle = () => {
     <div className="flex items-center rounded-full border border-white/20 overflow-hidden">
       <button
         onClick={() => switchLocale('es')}
-        className={`px-3 py-1 text-xs font-semibold transition-colors cursor-pointer ${
+        className={`px-3 py-2 text-xs font-semibold transition-colors cursor-pointer min-h-[44px] min-w-[44px] ${
           locale === 'es'
             ? 'bg-sage text-navy'
             : 'bg-transparent text-cream hover:text-white'
@@ -26,7 +26,7 @@ export const LanguageToggle = () => {
       </button>
       <button
         onClick={() => switchLocale('en')}
-        className={`px-3 py-1 text-xs font-semibold transition-colors cursor-pointer ${
+        className={`px-3 py-2 text-xs font-semibold transition-colors cursor-pointer min-h-[44px] min-w-[44px] ${
           locale === 'en'
             ? 'bg-sage text-navy'
             : 'bg-transparent text-cream hover:text-white'

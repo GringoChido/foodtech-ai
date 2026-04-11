@@ -125,7 +125,7 @@ export const Hero = () => {
       <motion.a
         href="#solutions"
         aria-label={t("scrollLabel")}
-        className="absolute bottom-8 left-1/2 z-30 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 z-30 -translate-x-1/2 p-3"
         animate={{ y: [0, 6, 0] }}
         transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
       >
