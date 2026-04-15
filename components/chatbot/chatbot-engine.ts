@@ -20,13 +20,13 @@ const topics: Record<string, { keywords: string[]; response: TopicResponse }> = 
     },
   },
   vostre: {
-    keywords: ['vostre', 'voice', 'phone', 'orders', 'front of house', '3pd', 'commission', 'calls', 'calling'],
+    keywords: ['voztre', 'voice', 'phone', 'orders', 'front of house', '3pd', 'commission', 'calls', 'calling'],
     response: {
-      en: "Vostre is your AI voice agent that handles phone and WhatsApp orders 24/7. It never misses a call, never puts customers on hold, and processes orders directly into your POS — zero 3PD commissions. Restaurants using Vostre recover thousands per month in orders that would have been lost or sent through high-commission delivery apps.",
-      es: "Vostre es tu agente de voz con IA que maneja pedidos por teléfono y WhatsApp las 24 horas. Nunca pierde una llamada, nunca pone a los clientes en espera y procesa los pedidos directamente en tu POS — cero comisiones de terceros. Los restaurantes que usan Vostre recuperan miles por mes en pedidos que se habrían perdido o enviado a través de apps de delivery con altas comisiones.",
+      en: "Voztre is your AI voice agent that handles phone and WhatsApp orders 24/7. It never misses a call, never puts customers on hold, and processes orders directly into your POS — zero 3PD commissions. Restaurants using Voztre recover thousands per month in orders that would have been lost or sent through high-commission delivery apps.",
+      es: "Voztre es tu agente de voz con IA que maneja pedidos por teléfono y WhatsApp las 24 horas. Nunca pierde una llamada, nunca pone a los clientes en espera y procesa los pedidos directamente en tu POS — cero comisiones de terceros. Los restaurantes que usan Voztre recuperan miles por mes en pedidos que se habrían perdido o enviado a través de apps de delivery con altas comisiones.",
       followUps: {
-        en: ["Can Vostre handle both English and Spanish?", "What happens if Vostre can't answer a question?", "How does Vostre connect to my menu?"],
-        es: ["¿Vostre puede manejar inglés y español?", "¿Qué pasa si Vostre no puede responder una pregunta?", "¿Cómo se conecta Vostre a mi menú?"],
+        en: ["Can Voztre handle both English and Spanish?", "What happens if Voztre can't answer a question?", "How does Voztre connect to my menu?"],
+        es: ["¿Voztre puede manejar inglés y español?", "¿Qué pasa si Voztre no puede responder una pregunta?", "¿Cómo se conecta Voztre a mi menú?"],
       },
     },
   },
@@ -44,8 +44,8 @@ const topics: Record<string, { keywords: string[]; response: TopicResponse }> = 
   pilot: {
     keywords: ['pilot', 'waitlist', 'join', 'sign up', 'apply', 'start', 'trial', 'lista', 'espera', 'unir', 'prueba'],
     response: {
-      en: "We're currently accepting applications for our Founding Pilot program. Priority goes to 4–15 unit fast-casual groups. The pilot includes a 30-day Xtock trial and a 7-day Vostre trial — no contracts, no setup fees. Scroll down to the waitlist form to apply, and we'll be in touch within 48 hours!",
-      es: "Actualmente estamos aceptando solicitudes para nuestro programa de Piloto Fundador. La prioridad es para grupos de comida rápida casual de 4 a 15 unidades. El piloto incluye una prueba de 30 días de Xtock y una prueba de 7 días de Vostre — sin contratos, sin tarifas de configuración. ¡Desplázate hacia abajo al formulario de lista de espera para aplicar, y te contactaremos dentro de 48 horas!",
+      en: "We're currently accepting applications for our Founding Pilot program. Priority goes to 4–15 unit fast-casual groups. The pilot includes a 30-day Xtock trial and a 7-day Voztre trial — no contracts, no setup fees. Scroll down to the waitlist form to apply, and we'll be in touch within 48 hours!",
+      es: "Actualmente estamos aceptando solicitudes para nuestro programa de Piloto Fundador. La prioridad es para grupos de comida rápida casual de 4 a 15 unidades. El piloto incluye una prueba de 30 días de Xtock y una prueba de 7 días de Voztre — sin contratos, sin tarifas de configuración. ¡Desplázate hacia abajo al formulario de lista de espera para aplicar, y te contactaremos dentro de 48 horas!",
       followUps: {
         en: ["What systems do you integrate with?", "How long is the onboarding?", "Is my data secure?"],
         es: ["¿Con qué sistemas se integran?", "¿Cuánto dura la incorporación?", "¿Mis datos están seguros?"],
@@ -113,8 +113,8 @@ const fallback: TopicResponse = {
   en: "I don't have the answer to that specific question, but our team would love to help. Scroll down to join the pilot waitlist and we'll be in touch within 48 hours!",
   es: "No tengo la respuesta a esa pregunta específica, pero a nuestro equipo le encantaría ayudarte. ¡Desplázate hacia abajo para unirte a la lista de espera del piloto y te contactaremos dentro de 48 horas!",
   followUps: {
-    en: ["Tell me about Xtock", "Tell me about Vostre", "How do I join the pilot?"],
-    es: ["Cuéntame sobre Xtock", "Cuéntame sobre Vostre", "¿Cómo me uno al piloto?"],
+    en: ["Tell me about Xtock", "Tell me about Voztre", "How do I join the pilot?"],
+    es: ["Cuéntame sobre Xtock", "Cuéntame sobre Voztre", "¿Cómo me uno al piloto?"],
   },
 };
 
@@ -133,11 +133,11 @@ export interface ChatResponse {
 
 export const getGreeting = (locale: 'en' | 'es'): ChatResponse => ({
   answer: locale === 'en'
-    ? "Hi! I'm the FoodTech AI assistant. I can answer questions about Xtock, Vostre, pricing, onboarding, security, and more. How can I help?"
-    : "¡Hola! Soy el asistente de FoodTech AI. Puedo responder preguntas sobre Xtock, Vostre, precios, incorporación, seguridad y más. ¿En qué puedo ayudarte?",
+    ? "Hi! I'm the FoodTech AI assistant. I can answer questions about Xtock, Voztre, pricing, onboarding, security, and more. How can I help?"
+    : "¡Hola! Soy el asistente de FoodTech AI. Puedo responder preguntas sobre Xtock, Voztre, precios, incorporación, seguridad y más. ¿En qué puedo ayudarte?",
   followUps: locale === 'en'
-    ? ["What is Xtock?", "What is Vostre?", "How do I join the pilot?"]
-    : ["¿Qué es Xtock?", "¿Qué es Vostre?", "¿Cómo me uno al piloto?"],
+    ? ["What is Xtock?", "What is Voztre?", "How do I join the pilot?"]
+    : ["¿Qué es Xtock?", "¿Qué es Voztre?", "¿Cómo me uno al piloto?"],
 });
 
 export const matchResponse = (input: string, locale: 'en' | 'es'): ChatResponse => {

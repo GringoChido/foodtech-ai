@@ -7,7 +7,7 @@ export const siteMetadata: Metadata = {
     template: "%s | FoodTech AI",
   },
   description:
-    "FoodTech AI builds AI teammates that remove operational drag for 4–15 unit fast-casual restaurant groups. Predictive inventory with Xtock. AI voice ordering with Vostre. Join the Founding Pilot.",
+    "FoodTech AI builds AI teammates that remove operational drag for 4–15 unit fast-casual restaurant groups. Predictive inventory with Xtock. AI voice ordering with Voztre. Join the Founding Pilot.",
   keywords: [
     "restaurant AI",
     "multi-unit restaurant technology",

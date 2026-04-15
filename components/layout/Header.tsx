@@ -72,14 +72,17 @@ export const Header = () => {
           </Button>
         </div>
 
-        <button
-          onClick={() => setIsMobileOpen(!isMobileOpen)}
-          className="inline-flex items-center justify-center rounded-lg p-2 text-cream transition-colors hover:bg-white/10 md:hidden min-h-[44px] min-w-[44px]"
-          aria-expanded={isMobileOpen}
-          aria-label={isMobileOpen ? "Close menu" : "Open menu"}
-        >
-          {isMobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <LanguageToggle />
+          <button
+            onClick={() => setIsMobileOpen(!isMobileOpen)}
+            className="inline-flex items-center justify-center rounded-lg p-2 text-cream transition-colors hover:bg-white/10 min-h-[44px] min-w-[44px]"
+            aria-expanded={isMobileOpen}
+            aria-label={isMobileOpen ? "Close menu" : "Open menu"}
+          >
+            {isMobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </nav>
 
       <AnimatePresence>
@@ -102,9 +105,6 @@ export const Header = () => {
                   {t(item.key)}
                 </a>
               ))}
-              <div className="flex items-center gap-4 px-3">
-                <LanguageToggle />
-              </div>
               <Button
                 as="a"
                 href="#waitlist"

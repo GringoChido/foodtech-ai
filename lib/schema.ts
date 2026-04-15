@@ -37,7 +37,7 @@ export const xtockSchema = {
 export const vostreSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "Vostre by FoodTech AI",
+  name: "Voztre by FoodTech AI",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web, WhatsApp, Phone",
   description:
@@ -69,7 +69,7 @@ export const webPageSchema = {
   "@type": "WebPage",
   name: "FoodTech AI — AI Teammates for Multi-Unit Restaurant Operators",
   description:
-    "FoodTech AI builds AI teammates — Xtock for predictive inventory and Vostre for voice ordering — that remove operational drag for 4–15 unit fast-casual restaurant groups.",
+    "FoodTech AI builds AI teammates — Xtock for predictive inventory and Voztre for voice ordering — that remove operational drag for 4–15 unit fast-casual restaurant groups.",
   isPartOf: {
     "@type": "WebSite",
     name: "FoodTech AI",

@@ -158,13 +158,13 @@ h1, h2, h3, h4, h5, h6 {
   100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
-/* Border beam animation for Vostre card */
+/* Border beam animation for Voztre card */
 @keyframes border-beam {
   0% { offset-distance: 0%; }
   100% { offset-distance: 100%; }
 }
 
-/* Border beam traveling light for Vostre card */
+/* Border beam traveling light for Voztre card */
 @keyframes border-beam-travel {
   0% { top: 0; left: 0; }
   25% { top: 0; left: calc(100% - 5rem); }

@@ -10,7 +10,7 @@ import { getSlot } from "@/lib/image-config";
 const quickLinks = [
   { key: "home", href: "#" },
   { key: "xtock", href: "#solutions", label: "Xtock" },
-  { key: "vostre", href: "#solutions", label: "Vostre" },
+  { key: "vostre", href: "#solutions", label: "Voztre" },
   { key: "faq", href: "#faq", label: "FAQ" },
   { key: "apply", href: "#waitlist" },
 ];

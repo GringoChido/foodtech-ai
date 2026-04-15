@@ -137,7 +137,7 @@ const XtockCard = () => {
   );
 };
 
-const VostreCard = () => {
+const VoztreCard = () => {
   const t = useTranslations("solutions");
 
   return (
@@ -245,7 +245,7 @@ export const ProductFeatures = () => {
             <XtockCard />
           </AnimateIn>
           <AnimateIn direction="right" delay={0.2}>
-            <VostreCard />
+            <VoztreCard />
           </AnimateIn>
         </div>
       </Container>

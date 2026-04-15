@@ -25,7 +25,7 @@ export const FAQ_ITEMS = [
   {
     question: "What does a trial look like?",
     answer:
-      "30-day Xtock trial. 7-day Vostre trial. No contracts. No setup fees. If it doesn't earn its keep, you walk.",
+      "30-day Xtock trial. 7-day Voztre trial. No contracts. No setup fees. If it doesn't earn its keep, you walk.",
   },
   {
     question: "Is my data secure?",

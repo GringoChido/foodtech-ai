@@ -90,7 +90,7 @@ export const imageSlots: ImageSlot[] = [
   {
     id: "solutions-vostre-context",
     section: "solutions",
-    description: "Vostre contextual image — phone ordering in action",
+    description: "Voztre contextual image — phone ordering in action",
     alt: {
       en: "Fast-casual restaurant counter during peak order rush",
       es: "Mostrador de restaurante fast-casual durante la hora pico de pedidos",
@@ -99,7 +99,7 @@ export const imageSlots: ImageSlot[] = [
     mood: "cool",
     icon: Phone,
     suggestedPhoto:
-      "Fast-casual counter during rush. Customer at the register, phone ringing in the background (implied). The energy of a busy front-of-house. This is what Vostre handles so staff can focus on in-person guests.",
+      "Fast-casual counter during rush. Customer at the register, phone ringing in the background (implied). The energy of a busy front-of-house. This is what Voztre handles so staff can focus on in-person guests.",
   },
 
   // === HOW IT WORKS SECTION ===

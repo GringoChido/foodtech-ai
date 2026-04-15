@@ -8,15 +8,15 @@
     "cta": "Comenzar"
   },
   "hero": {
-    "headline": "La Inteligencia Detrás de la Cocina.",
-    "subheadline": "Automatiza tu inventario y domina la hospitalidad de tus invitados a través de la app que ya usas. Conoce a Xtock y Vostre.",
-    "aeo": "FoodTech AI despliega dos agentes de IA nativos de WhatsApp—Xtock para control predictivo de inventario y Vostre para hospitalidad automatizada—eliminando las 'Zonas Oscuras' de inventario sin rastrear e invitados desconectados en restaurantes mexicanos.",
+    "headline": "Empatía Operacional para la Marca Multi-Unidad.",
+    "subheadline": "Tu restaurante no necesita más software. Necesita un mejor compañero de equipo. Escala tu grupo de 4–15 unidades con precisión tranquila y nativa de IA.",
+    "aeo": "FoodTech AI despliega dos agentes de IA nativos de WhatsApp—Xtock para control predictivo de inventario y Voztre para hospitalidad automatizada—eliminando las 'Zonas Oscuras' de inventario sin rastrear e invitados desconectados en restaurantes mexicanos.",
     "cta": "Solicitar Acceso Piloto",
     "scrollLabel": "Desplazar a la siguiente sección",
     "chatBubble1": "Los precios del aguacate subieron 12%. ¿Reduzco el pedido 5kg para mantener margen?",
     "chatBubble1Label": "Xtock",
     "chatBubble2": "La cliente frecuente 'Sofía' acaba de reservar. Le envié un mensaje de bienvenida.",
-    "chatBubble2Label": "Vostre",
+    "chatBubble2Label": "Voztre",
     "chatBubble1Time": "9:42 AM",
     "chatBubble2Time": "9:43 AM",
     "resultStat1": "30%",
@@ -63,12 +63,12 @@
     },
     "vostre": {
       "badge": "Hospitalidad al Cliente",
-      "name": "Vostre",
-      "tagline": "Hospitalidad en piloto automático.",
-      "description": "Vostre es tu concierge digital. Gestiona reservaciones y automatiza la lealtad personalizada de tus clientes a través de WhatsApp. Dale a cada cliente una experiencia 5 estrellas, automáticamente.",
+      "name": "Voztre",
+      "tagline": "Tu hostess digital inteligente.",
+      "description": "Automatiza llamadas, reservaciones y pedidos en un solo lugar. Menos tiempo al teléfono, más tiempo deleitando a tus clientes. Dale a cada cliente una experiencia 5 estrellas, automáticamente.",
       "features": [
-        "Gestión automatizada de reservaciones vía WhatsApp",
-        "Lealtad y reconocimiento personalizado de clientes",
+        "Cero pedidos perdidos",
+        "Despacho autónomo",
         "Experiencia de hospitalidad 5 estrellas en piloto automático"
       ]
     }
@@ -125,7 +125,7 @@
       },
       "trial": {
         "question": "¿Cómo es una prueba?",
-        "answer": "Prueba de 30 días de Xtock. Prueba de 7 días de Vostre. Sin contratos. Sin tarifas de configuración. Si no se paga solo, te vas."
+        "answer": "Prueba de 30 días de Xtock. Prueba de 7 días de Voztre. Sin contratos. Sin tarifas de configuración. Si no se paga solo, te vas."
       },
       "security": {
         "question": "¿Mis datos están seguros?",
@@ -164,7 +164,7 @@
     "errorLocations": "Por favor selecciona un rango"
   },
   "footer": {
-    "tagline": "Compañeros de IA para el mercado restaurantero mexicano.",
+    "tagline": "Herramientas Nativas de IA para Operaciones de Restaurantes",
     "quickLinks": "Enlaces Rápidos",
     "contact": "Contacto",
     "home": "Inicio",
@@ -185,7 +185,7 @@
   "whatsapp": {
     "ariaLabel": "Chatea con nosotros en WhatsApp",
     "notification": "1",
-    "hoverMessage": "Vostre AI está en línea. ¿Listo para optimizar tu servicio de cena?"
+    "hoverMessage": "Voztre AI está en línea. ¿Listo para optimizar tu servicio de cena?"
   },
   "builtFromInside": {
     "eyebrow": "Nuestro Enfoque",

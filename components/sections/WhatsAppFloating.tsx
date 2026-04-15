@@ -31,7 +31,7 @@ export const WhatsAppFloating = () => {
                 <span className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border-2 border-base bg-whatsapp" />
               </div>
               <div>
-                <p className="text-xs font-semibold text-white">Vostre AI</p>
+                <p className="text-xs font-semibold text-white">Voztre AI</p>
                 <p className="text-[10px] text-whatsapp/70">online</p>
               </div>
             </div>

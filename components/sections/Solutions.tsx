@@ -140,7 +140,6 @@ export const Solutions = () => {
                 {t("xtock.name")}
               </h3>
               <p className="mt-1 text-navy/60">{t("xtock.tagline")}</p>
-              <p className="mt-2 text-sm text-navy/50">{t("xtock.aeo")}</p>
               <ul className="mt-5 flex flex-col gap-2.5 text-sm text-navy/80">
                 {xtockFeatures.map((f) => (
                   <li key={f} className="flex gap-2">
@@ -163,7 +162,6 @@ export const Solutions = () => {
                 {t("vostre.name")}
               </h3>
               <p className="mt-1 text-navy/60">{t("vostre.tagline")}</p>
-              <p className="mt-2 text-sm text-navy/50">{t("vostre.aeo")}</p>
               <ul className="mt-5 flex flex-col gap-2.5 text-sm text-navy/80">
                 {vostreFeatures.map((f) => (
                   <li key={f} className="flex gap-2">
@@ -174,7 +172,7 @@ export const Solutions = () => {
               </ul>
 
               <div className="mt-8">
-                <PhoneFrame contactName="Vostre" messages={vostreMessages} rotate="-rotate-1" />
+                <PhoneFrame contactName="Voztre" messages={vostreMessages} rotate="-rotate-1" />
               </div>
             </div>
           </AnimateIn>
