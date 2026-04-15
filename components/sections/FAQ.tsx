@@ -25,7 +25,7 @@ export const FAQ = () => {
   return (
     <SectionWrapper id="faq" bg="navy" grain cursorGlow>
       {/* Animated shader background — subtle accent */}
-      <div className="absolute inset-0 z-0 opacity-[0.12]">
+      <div className="pointer-events-none absolute inset-0 z-0 opacity-[0.12]">
         <ShaderBackground />
       </div>
 
