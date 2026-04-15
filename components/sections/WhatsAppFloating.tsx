@@ -58,7 +58,7 @@ export const WhatsAppFloating = () => {
 
       {/* FAB button */}
       <motion.a
-        href="https://wa.me/521234567890"
+        href="https://wa.me/17864995799"
         target="_blank"
         rel="noopener noreferrer"
         aria-label={t("ariaLabel")}
